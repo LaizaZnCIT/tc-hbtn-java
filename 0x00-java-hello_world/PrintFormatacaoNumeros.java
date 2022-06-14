@@ -5,5 +5,6 @@ public class PrintFormatacaoNumeros {
         System.out.printf("Valor: R$ %,.2f", valor);
         System.out.println("");
         System.out.printf("Taxa: %.2f%%", taxa);
+        System.out.println("");
     }
 }
