@@ -1,5 +1,5 @@
 public class InteiroPositivo {
-    int valor;
+    private int valor;
 
     public InteiroPositivo(int valor) {
         this.valor = valor;
