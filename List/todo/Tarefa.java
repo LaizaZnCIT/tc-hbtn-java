@@ -35,10 +35,4 @@ public class Tarefa {
         this.identificador = identificador;
     }
 
-    public void modificarDescricao(){
-        if(descricao == null || descricao.equals("")){
-            throw new IllegalArgumentException("Descricao de tarefa invalida");
-        }
-
-    }
 }

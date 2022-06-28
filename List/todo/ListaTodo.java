@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListaTodo {
-    ArrayList<Tarefa> tarefas;
+    List<Tarefa> tarefas;
 
     public ListaTodo() {
         tarefas = new ArrayList<>();
@@ -52,7 +53,7 @@ public class ListaTodo {
     public void listarTarefas(){
         for (Tarefa t: tarefas){
             String s = t.isEstahFeita() ? "X" : " ";
-            System.out.println("["+ s +"] Id: " + t.getIdentificador() + " Descricao: " + t.getDescricao());
+            System.out.println("["+ s +"]  Id: " + t.getIdentificador() + " Descricao: " + t.getDescricao());
         }
     }
 }
