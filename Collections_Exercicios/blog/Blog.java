@@ -4,6 +4,7 @@ public class Blog {
 
     public Blog() {
        posts = new LinkedList<>();
+       Collections.unmodifiableList(posts);
     }
 
     public void adicionarPostagem(Post novoPost){
