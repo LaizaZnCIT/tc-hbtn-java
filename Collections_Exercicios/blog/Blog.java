@@ -1,13 +1,13 @@
 import java.util.*;
 public class Blog {
-    private List<Post> posts;
+    private ArrayList<Post> posts;
 
     public Blog() {
-       posts = new LinkedList<Post>();
+       posts = new ArrayList<>();
     }
 
-    public void adicionarPostagem(Post novoPost){
-        posts.add(novoPost);
+    public void adicionarPostagem(Post postagem){
+        posts.add(postagem);
     }
     public Set<String> obterTodosAutores(){
         Set<String> autores = new TreeSet<>();
