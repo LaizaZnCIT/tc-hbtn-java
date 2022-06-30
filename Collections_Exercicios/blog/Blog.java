@@ -3,7 +3,7 @@ public class Blog {
     private List<Post> posts;
 
     public Blog() {
-        posts = new ArrayList<>();
+       posts = new LinkedList<>();
     }
 
     public void adicionarPostagem(Post novoPost){
