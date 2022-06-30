@@ -3,8 +3,7 @@ public class Blog {
     private List<Post> posts;
 
     public Blog() {
-       posts = new LinkedList<>();
-       Collections.unmodifiableList(posts);
+       posts = new LinkedList<Post>();
     }
 
     public void adicionarPostagem(Post novoPost){
