@@ -1,4 +1,4 @@
-public class Telefone {
+public class Telefone{
     private String codigoArea;
     private String numero;
 
@@ -16,24 +16,28 @@ public class Telefone {
     }
 
     @Override
-    public int hashCode(){
-        final int prime = 7;
-        int result = 1;
-        result = prime * result + ((codigoArea == null) ? 0 : codigoArea.hashCode());
-        result = prime * result + ((numero == null) ? 0 : numero.hashCode());
-        return result;
+    public boolean equals(Object o) {
+
+        if (this == o) return true;
+        if (!(o instanceof Telefone)) return false;
+
+        Telefone telefone = (Telefone) o;
+
+        if (!codigoArea.equals(telefone.codigoArea)) return false;
+        return numero.equals(telefone.numero);
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Telefone telefone = (Telefone) o;
-        return codigoArea.equals(telefone.codigoArea) && numero.equals(telefone.numero);
+    public int hashCode() {
+
+        int result = codigoArea.hashCode();
+        result = 5 * result + numero.hashCode();
+        return result;
     }
 
     @Override
     public String toString(){
         return "("+ codigoArea + ") " + "" + numero;
     }
+
 }

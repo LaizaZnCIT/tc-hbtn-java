@@ -1,9 +1,7 @@
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
+import java.util.*;
+
 public class ListaTelefonica {
     HashMap<String, HashSet<Telefone>> nomeTelefone;
-
     public ListaTelefonica() {
         nomeTelefone = new HashMap<>();
     }
@@ -25,13 +23,16 @@ public class ListaTelefonica {
                 }
             }
         }
-
         telefones.add(telefone);
         nomeTelefone.put(nome, telefones);
-
     }
 
     public HashSet<Telefone> buscar(String nome){
-        return nomeTelefone.get(nome);
+        for(Map.Entry<String, HashSet<Telefone>> nt : nomeTelefone.entrySet()){
+            if(nome.equals(nt.getKey())){
+                return nt.getValue();
+            }
+        }
+        return null;
     }
 }

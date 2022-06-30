@@ -15,13 +15,13 @@ public class Program {
 
         ListaTelefonica listaTelefonica1 = new ListaTelefonica();
 
-        listaTelefonica1.adicionarTelefone("Pedro Alvaro", telefone7);
-        listaTelefonica1.adicionarTelefone("Pedro Alvaro", telefone2);
         listaTelefonica1.adicionarTelefone("Pedro Alvaro", telefone1);
+        listaTelefonica1.adicionarTelefone("Pedro Alvaro", telefone2);
+        listaTelefonica1.adicionarTelefone("Pedro Alvaro", telefone7);
         listaTelefonica1.adicionarTelefone("Maria Joaquina", telefone3);
         listaTelefonica1.adicionarTelefone("Maria Joaquina", telefone5);
-        listaTelefonica1.adicionarTelefone("Carlos Alberto", telefone6);
         listaTelefonica1.adicionarTelefone("Carlos Alberto", telefone4);
+        listaTelefonica1.adicionarTelefone("Carlos Alberto", telefone6);
 
         try {
             listaTelefonica1.adicionarTelefone("Pedro Alvaro", telefoneDuplicado1);
