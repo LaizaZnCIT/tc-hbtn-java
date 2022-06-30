@@ -1,17 +1,17 @@
 import java.util.*;
 public class Blog {
-    private ArrayList<Post> posts;
+    private ArrayList<Post> postagens;
 
     public Blog() {
-       posts = new ArrayList<>();
+       postagens = new ArrayList<>();
     }
 
     public void adicionarPostagem(Post postagem){
-        posts.add(postagem);
+        postagens.add(postagem);
     }
     public Set<String> obterTodosAutores(){
         Set<String> autores = new TreeSet<>();
-        for(Post p: posts){
+        for(Post p: postagens){
             autores.add(p.getAutor());
         }
         return autores;
@@ -19,7 +19,7 @@ public class Blog {
 
     public Map<String, Integer> obterContagemPorCategoria(){
         Map<String, Integer> categorias = new TreeMap<>();
-        for(Post p: posts){
+        for(Post p: postagens){
             Integer count = categorias.get(p.getCategoria());
             if(count  == null)
                 categorias.put(p.getCategoria(), 1);
