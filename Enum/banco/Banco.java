@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class Banco {
     private String nome;
@@ -44,6 +45,7 @@ public class Banco {
 
     public boolean listarClientes(String nomeAgencia, boolean imprimeTransacao){
         Agencia agencia = buscarAgencia(nomeAgencia);
+        java.util.Locale locale = new java.util.Locale("en", "US");
         if(buscarAgencia(nomeAgencia) != null){
             if(!imprimeTransacao){
                 for(Cliente c : agencia.getClientes()){
@@ -51,9 +53,9 @@ public class Banco {
                 }
             } else {
                 for (Cliente c : agencia.getClientes()){
-                    System.out.printf("\nCliente: %s [%d]", c.getNome(), agencia.getClientes().indexOf(c)+1);
+                    System.out.printf("Cliente: %s [%d] \n", c.getNome(), agencia.getClientes().indexOf(c)+1);
                     for(Double t : c.getTransacoes()){
-                        System.out.printf("\n[%d] valor %.2f", c.getTransacoes().indexOf(t)+1, t);
+                        System.out.printf(locale,"  [%d] valor %.2f \n", c.getTransacoes().indexOf(t)+1, t);
                     }
                 }
             }
