@@ -53,9 +53,9 @@ public class Banco {
                 }
             } else {
                 for (Cliente c : agencia.getClientes()){
-                    System.out.printf("Cliente: %s [%d] \n", c.getNome(), agencia.getClientes().indexOf(c)+1);
+                    System.out.printf("Cliente: %s [%d]\n", c.getNome(), agencia.getClientes().indexOf(c)+1);
                     for(Double t : c.getTransacoes()){
-                        System.out.printf(locale,"  [%d] valor %.2f \n", c.getTransacoes().indexOf(t)+1, t);
+                        System.out.printf(locale,"  [%d] valor %.2f\n", c.getTransacoes().indexOf(t)+1, t);
                     }
                 }
             }
