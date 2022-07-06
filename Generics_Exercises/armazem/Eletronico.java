@@ -17,6 +17,7 @@ public class Eletronico {
 
     @Override
     public String toString(){
-        return String.format("[%s] R$ %.6f", getDescricao(), getValor());
+        java.util.Locale locale = new java.util.Locale("pt", "BR");
+        return String.format(locale, "[%s] R$ %.6f", getDescricao(), getValor());
     }
 }
