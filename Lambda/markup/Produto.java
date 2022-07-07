@@ -4,7 +4,7 @@ import java.util.function.Supplier;
 public class Produto {
     private String nome;
     private double preco;
-    protected double percentualMarkup;
+    protected Double percentualMarkup;
     protected Supplier<Double> precoComMarkup;
     protected Consumer<Double> atualizarMarkup;
 
@@ -23,4 +23,5 @@ public class Produto {
     public String getNome() {
         return nome;
     }
+
 }
