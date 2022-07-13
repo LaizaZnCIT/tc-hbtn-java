@@ -1,4 +1,5 @@
 import java.util.Comparator;
+import java.util.Locale;
 import java.util.Objects;
 
 public class Pessoa implements Comparable<Pessoa> {
@@ -37,7 +38,8 @@ public class Pessoa implements Comparable<Pessoa> {
     }
 
     public String toString(){
-        return String.format("[%d] %s %s %d R$ %.6f", codigo, nome, cargo, idade, salario);
+        java.util.Locale locale = new Locale("pt", "BR");
+        return String.format(locale, "[%d] %s %s %d R$ %.6f", codigo, nome, cargo, idade, salario);
     }
 
     @Override
