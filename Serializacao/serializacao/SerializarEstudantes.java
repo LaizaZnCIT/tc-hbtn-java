@@ -1,8 +1,8 @@
 import java.io.*;
 import java.util.List;
 
+@SuppressWarnings("unchecked")
 public class SerializarEstudantes<Estudante> {
-    @SuppressWarnings("unchecked")
     private String nomeArquivo;
 
     public SerializarEstudantes(String nomeArquivo) {
